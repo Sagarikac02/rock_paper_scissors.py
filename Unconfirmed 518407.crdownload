@@ -1,0 +1,29 @@
+import random
+print('Lets play a game of rock, paper and scissors')
+print("Winning Rules of the Rock paper scissor game as follows: \n"+"Rock vs paper->paper wins \n"+ "Rock vs scissor->Rock wins \n"+"paper vs scissor->scissor wins \n")
+actions = ['rock','paper','scissors']
+action = random.choice(actions)
+
+userchoice = input('Choose your object: ')
+print('I chose',action)
+print('You chose',userchoice)
+L=[]
+L.append(action)
+L.append(userchoice)
+if 'rock' in L and 'paper' in L:
+  if L[0] == 'paper':
+    print('Ah! Sorry but I won!')
+  else:
+    print('Shit! Okay good game tho!')
+elif 'rock' in L and 'scissors' in L:
+  if L[0] == 'rock':
+    print('Ah! Sorry but I won!')
+  else:
+    print('Shit! Okay good game tho!')
+elif 'paper' in L and 'scissors' in L:
+  if L[0] == 'scissors':
+    print('Ah! Sorry but I won!')
+  else:
+    print('Shit! Okay good game tho!')
+elif userchoice == action:
+  print("It's a draw!")
